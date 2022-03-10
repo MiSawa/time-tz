@@ -14,7 +14,7 @@ categories = ["date-and-time"]
 
 [dependencies]
 phf = "0.10.1"
-time = { version = "0.3.7", features = ["macros"] }
+time = { version = "0.3.7", features = ["macros", "formatting"] }
 cfg-if = "1.0.0"
 
 thiserror = { version = "1.0.30", optional = true }
@@ -30,5 +30,6 @@ serde-xml-rs = "0.5.1"
 serde = { version = "1.0.136", features = ["derive"] }
 
 [features]
+default = ["parse-tz"]
 system = ["windows-sys", "thiserror"]
 parse-tz = ["nom", "thiserror"]
